@@ -14,7 +14,7 @@ namespace FloBot.Tasks
 
         private const String gameName = "FlorensiaEN.bin";
         private const String gameNameMultiClient = "FlorensiaEN";
-        private static String oldWindowName ="";
+        private static String oldWindowName ="Florensia ver2.02.00";
         private static String oldProcessNumber = "";
         public bool doTask(mainForm main_form, Player player)
         {
@@ -28,13 +28,13 @@ namespace FloBot.Tasks
 
             if (mc.Process_Handle(gameName, number, main_form.tbProcessName.Text, !(oldProcessNumber.Equals(main_form.tbProcessID.Text) && oldWindowName.Equals(main_form.tbProcessName.Text))))
             {
-                main_form.lblGameFound.Text = "Flo found";
+                main_form.lblGameFound.Text = "Multiclient found";
                
                 oldProcessNumber = main_form.tbProcessID.Text;
                 oldWindowName = main_form.tbProcessName.Text;
                 return true;
             }
-            main_form.lblGameFound.Text = "Flo not found";
+            main_form.lblGameFound.Text = "Multiclient not found";
 
             return false;
         }
