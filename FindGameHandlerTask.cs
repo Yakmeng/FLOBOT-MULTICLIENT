@@ -12,8 +12,8 @@ namespace FloBot.Tasks
     class FindGameHandlerTask : ITask
     {
 
-        private const String gameName = "FlorensiaEN.bin";
-        private const String gameNameMultiClient = "FlorensiaEN";
+        private const String gameName = "MultiFlo.bin";
+        private const String gameNameMultiClient = "MultiFlo";
         private static String oldWindowName ="Florensia ver2.02.00";
         private static String oldProcessNumber = "";
         public bool doTask(mainForm main_form, Player player)
